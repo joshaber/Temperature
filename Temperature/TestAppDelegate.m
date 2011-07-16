@@ -1,20 +1,27 @@
 //
-//  TemperatureAppDelegate.m
+//  TestAppDelegate.m
 //  Temperature
 //
 //  Created by Josh Abernathy on 7/15/11.
 //  Copyright 2011 Maybe Apps, LLC. All rights reserved.
 //
 
-#import "TemperatureAppDelegate.h"
+#import "TestAppDelegate.h"
+#import "TestController.h"
 
-@implementation TemperatureAppDelegate
 
-@synthesize window = _window;
+@implementation TestAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-	// Insert code here to initialize your application
+
+#pragma mark NSApplicationDelegate
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+	[[TestController sharedInstance] startTesting];
 }
+
+
+#pragma mark API
+
+@synthesize window;
 
 @end

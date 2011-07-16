@@ -1,5 +1,5 @@
 //
-//  TemperatureAppDelegate.h
+//  TestAppDelegate.h
 //  Temperature
 //
 //  Created by Josh Abernathy on 7/15/11.
@@ -8,9 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface TemperatureAppDelegate : NSObject <NSApplicationDelegate> {
-	NSWindow *_window;
-}
+
+@interface TestAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong) IBOutlet NSWindow *window;
 
