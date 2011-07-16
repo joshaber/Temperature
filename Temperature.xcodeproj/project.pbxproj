@@ -7,28 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883CEB9A13D18D6600D133D6 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 883CEB9913D18D6600D133D6 /* TestController.m */; };
 		88E2669713D16D7700AE01B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E2669613D16D7700AE01B6 /* Cocoa.framework */; };
 		88E266A113D16D7700AE01B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88E2669F13D16D7700AE01B6 /* InfoPlist.strings */; };
 		88E266A313D16D7700AE01B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266A213D16D7700AE01B6 /* main.m */; };
 		88E266A713D16D7700AE01B6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 88E266A513D16D7700AE01B6 /* Credits.rtf */; };
-		88E266AA13D16D7700AE01B6 /* TemperatureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266A913D16D7700AE01B6 /* TemperatureAppDelegate.m */; };
+		88E266AA13D16D7700AE01B6 /* TestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266A913D16D7700AE01B6 /* TestAppDelegate.m */; };
 		88E266AD13D16D7700AE01B6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E266AB13D16D7700AE01B6 /* MainMenu.xib */; };
+		88E266C913D1860000AE01B6 /* TPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266C413D1860000AE01B6 /* TPApplication.m */; };
+		88E266CA13D1860000AE01B6 /* TPElement+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266C613D1860000AE01B6 /* TPElement+Private.m */; };
+		88E266CB13D1860000AE01B6 /* TPElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266C813D1860000AE01B6 /* TPElement.m */; };
+		88E266CF13D1869200AE01B6 /* TPTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266CE13D1869200AE01B6 /* TPTestController.m */; };
+		88E266D213D186E900AE01B6 /* TPTestScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266D113D186E900AE01B6 /* TPTestScenario.m */; };
+		88E266D513D187C300AE01B6 /* TPTestStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E266D413D187C300AE01B6 /* TPTestStep.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883CEB9813D18D6500D133D6 /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
+		883CEB9913D18D6600D133D6 /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
 		88E2669213D16D7700AE01B6 /* Temperature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Temperature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E2669613D16D7700AE01B6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		88E2669913D16D7700AE01B6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		88E2669A13D16D7700AE01B6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		88E2669B13D16D7700AE01B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		88E2669E13D16D7700AE01B6 /* Temperature-Info.plist */ = {isa = PBXFileReference; path = "Temperature-Info.plist"; sourceTree = "<group>"; };
+		88E2669E13D16D7700AE01B6 /* Temperature-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Temperature-Info.plist"; sourceTree = "<group>"; };
 		88E266A013D16D7700AE01B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		88E266A213D16D7700AE01B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		88E266A413D16D7700AE01B6 /* Temperature-Prefix.pch */ = {isa = PBXFileReference; path = "Temperature-Prefix.pch"; sourceTree = "<group>"; };
+		88E266A413D16D7700AE01B6 /* Temperature-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Temperature-Prefix.pch"; sourceTree = "<group>"; };
 		88E266A613D16D7700AE01B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		88E266A813D16D7700AE01B6 /* TemperatureAppDelegate.h */ = {isa = PBXFileReference; path = TemperatureAppDelegate.h; sourceTree = "<group>"; };
-		88E266A913D16D7700AE01B6 /* TemperatureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemperatureAppDelegate.m; sourceTree = "<group>"; };
+		88E266A813D16D7700AE01B6 /* TestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAppDelegate.h; sourceTree = "<group>"; };
+		88E266A913D16D7700AE01B6 /* TestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppDelegate.m; sourceTree = "<group>"; };
 		88E266AC13D16D7700AE01B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		88E266C313D1860000AE01B6 /* TPApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPApplication.h; sourceTree = "<group>"; };
+		88E266C413D1860000AE01B6 /* TPApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPApplication.m; sourceTree = "<group>"; };
+		88E266C513D1860000AE01B6 /* TPElement+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPElement+Private.h"; sourceTree = "<group>"; };
+		88E266C613D1860000AE01B6 /* TPElement+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TPElement+Private.m"; sourceTree = "<group>"; };
+		88E266C713D1860000AE01B6 /* TPElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPElement.h; sourceTree = "<group>"; };
+		88E266C813D1860000AE01B6 /* TPElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPElement.m; sourceTree = "<group>"; };
+		88E266CD13D1869200AE01B6 /* TPTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPTestController.h; path = Temperature/Testing/TPTestController.h; sourceTree = SOURCE_ROOT; };
+		88E266CE13D1869200AE01B6 /* TPTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPTestController.m; path = Temperature/Testing/TPTestController.m; sourceTree = SOURCE_ROOT; };
+		88E266D013D186E900AE01B6 /* TPTestScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPTestScenario.h; path = Temperature/Testing/TPTestScenario.h; sourceTree = SOURCE_ROOT; };
+		88E266D113D186E900AE01B6 /* TPTestScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPTestScenario.m; path = Temperature/Testing/TPTestScenario.m; sourceTree = SOURCE_ROOT; };
+		88E266D313D187C300AE01B6 /* TPTestStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPTestStep.h; path = Temperature/Testing/TPTestStep.h; sourceTree = SOURCE_ROOT; };
+		88E266D413D187C300AE01B6 /* TPTestStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TPTestStep.m; path = Temperature/Testing/TPTestStep.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +103,14 @@
 		88E2669C13D16D7700AE01B6 /* Temperature */ = {
 			isa = PBXGroup;
 			children = (
-				88E266A813D16D7700AE01B6 /* TemperatureAppDelegate.h */,
-				88E266A913D16D7700AE01B6 /* TemperatureAppDelegate.m */,
+				88E266A813D16D7700AE01B6 /* TestAppDelegate.h */,
+				88E266A913D16D7700AE01B6 /* TestAppDelegate.m */,
 				88E266AB13D16D7700AE01B6 /* MainMenu.xib */,
+				883CEB9813D18D6500D133D6 /* TestController.h */,
+				883CEB9913D18D6600D133D6 /* TestController.m */,
 				88E2669D13D16D7700AE01B6 /* Supporting Files */,
+				88E266C213D1860000AE01B6 /* AX */,
+				88E266CC13D1867D00AE01B6 /* Testing */,
 			);
 			path = Temperature;
 			sourceTree = "<group>";
@@ -100,6 +125,33 @@
 				88E266A513D16D7700AE01B6 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88E266C213D1860000AE01B6 /* AX */ = {
+			isa = PBXGroup;
+			children = (
+				88E266C713D1860000AE01B6 /* TPElement.h */,
+				88E266C813D1860000AE01B6 /* TPElement.m */,
+				88E266C513D1860000AE01B6 /* TPElement+Private.h */,
+				88E266C613D1860000AE01B6 /* TPElement+Private.m */,
+				88E266C313D1860000AE01B6 /* TPApplication.h */,
+				88E266C413D1860000AE01B6 /* TPApplication.m */,
+			);
+			path = AX;
+			sourceTree = "<group>";
+		};
+		88E266CC13D1867D00AE01B6 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				88E266CD13D1869200AE01B6 /* TPTestController.h */,
+				88E266CE13D1869200AE01B6 /* TPTestController.m */,
+				88E266D013D186E900AE01B6 /* TPTestScenario.h */,
+				88E266D113D186E900AE01B6 /* TPTestScenario.m */,
+				88E266D313D187C300AE01B6 /* TPTestStep.h */,
+				88E266D413D187C300AE01B6 /* TPTestStep.m */,
+			);
+			name = Testing;
+			path = AX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E266A313D16D7700AE01B6 /* main.m in Sources */,
-				88E266AA13D16D7700AE01B6 /* TemperatureAppDelegate.m in Sources */,
+				88E266AA13D16D7700AE01B6 /* TestAppDelegate.m in Sources */,
+				88E266C913D1860000AE01B6 /* TPApplication.m in Sources */,
+				88E266CA13D1860000AE01B6 /* TPElement+Private.m in Sources */,
+				88E266CB13D1860000AE01B6 /* TPElement.m in Sources */,
+				88E266CF13D1869200AE01B6 /* TPTestController.m in Sources */,
+				88E266D213D186E900AE01B6 /* TPTestScenario.m in Sources */,
+				88E266D513D187C300AE01B6 /* TPTestStep.m in Sources */,
+				883CEB9A13D18D6600D133D6 /* TestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +283,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -244,6 +304,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -288,6 +349,7 @@
 				88E266B213D16D7700AE01B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
