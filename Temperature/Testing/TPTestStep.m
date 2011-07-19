@@ -7,6 +7,7 @@
 //
 
 #import "TPTestStep.h"
+#import "TPElement.h"
 
 @interface TPTestStep ()
 @property (nonatomic, copy) NSString *description;
@@ -21,6 +22,7 @@
 
 @synthesize description;
 @synthesize executionBlock;
+@synthesize rootElement;
 
 + (TPTestStep *)stepWithDescription:(NSString *)description executionBlock:(TPTestStepExecutionBlock)block {
 	NSParameterAssert(block != nil);
@@ -29,6 +31,33 @@
 	step.executionBlock = block;
 	step.description = description;
 	return step;
+}
+
++ (TPTestStep *)stepThatFails {
+	return [self stepWithDescription:@"Always fails" executionBlock:^TPTestStepResult(TPTestStep *step, NSError **error) {
+        TPTestCondition(NO, error, @"This test always fails");
+    }];
+}
+
++ (TPTestStep *)stepThatSucceeds {
+	return [self stepWithDescription:@"Always succeeds" executionBlock:^TPTestStepResult(TPTestStep *step, NSError **error) {
+        return TPTestStepResultSuccess;
+    }];
+}
+
++ (TPTestStep *)stepToWaitForViewWithAccessibilityIdentifier:(NSString *)identifier {
+	return nil;
+}
+
++ (TPTestStep *)stepToClickOnViewWithAccessibilityIdentifier:(NSString *)identifier {
+	return [self stepWithDescription:[NSString stringWithFormat:@"Click on %@", identifier] executionBlock:^TPTestStepResult(TPTestStep *step, NSError **error) {
+		TPElement *element = [step.rootElement childWithIdentifier:identifier];
+		TPTestCondition(element != nil, error, @"Couldn't find element with identifier '%@'", identifier);
+		
+		[element performPressAction];
+		
+		return TPTestStepResultSuccess;
+	}];
 }
 
 - (TPTestStepResult)executeAndReturnError:(NSError **)error {

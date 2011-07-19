@@ -21,6 +21,7 @@
 
 @synthesize description;
 @synthesize steps;
+@synthesize rootElement;
 
 + (TPTestScenario *)scenarioWithDescription:(NSString *)description {
 	TPTestScenario *scenario = [[self alloc] init];
@@ -34,6 +35,8 @@
 
 - (TPTestStepResult)executeAndReturnError:(NSError **)error {
 	for(TPTestStep *step in self.steps) {
+		step.rootElement = self.rootElement;
+		
 		NSError *error = nil;
 		TPTestStepResult result = [step executeAndReturnError:&error];
 		if(result == TPTestStepResultFailure) {

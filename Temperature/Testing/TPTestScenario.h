@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "TPTestStep.h"
 
+@class TPElement;
+
 
 @interface TPTestScenario : NSObject
 
@@ -19,5 +21,6 @@
 - (TPTestStepResult)executeAndReturnError:(NSError **)error;
 
 @property (nonatomic, copy, readonly) NSString *description;
+@property (nonatomic, strong) TPElement *rootElement;
 
 @end

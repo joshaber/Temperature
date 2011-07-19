@@ -18,21 +18,19 @@
 
 - (void)initializeTestScenarios {
 	TPTestScenario *scenario = [TPTestScenario scenarioWithDescription:@"First test"];
-//	[scenario addStep:[TPTestStep stepWithDescription:@"my-button" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
-//		return [[TPApplication applicationWithCurrentApplication].mainWindow childWithIdentifier:@"my-button"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
-//	}]];
-//	
-	[scenario addStep:[TPTestStep stepWithDescription:@"my-view" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
-		return [[TPApplication applicationWithCurrentApplication].mainWindow childWithIdentifier:@"my-view"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
+	[scenario addStep:[TPTestStep stepWithDescription:@"my-button" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
+		return [self.application.mainWindow childWithIdentifier:@"my-button"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
 	}]];
-//	
-//	[scenario addStep:[TPTestStep stepWithDescription:@"pretty-button" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
-//		return [self.application.mainWindow childWithIdentifier:@"pretty-button"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
-//	}]];
-
-//	[scenario addStep:[TPTestStep stepWithDescription:@"pretty-button" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
-//		return [self.application.mainWindow childWithPath:@"my-view/pretty-button"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
-//	}]];
+	
+	[scenario addStep:[TPTestStep stepWithDescription:@"my-view" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
+		return [self.application.mainWindow childWithIdentifier:@"my-view"] == nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
+	}]];
+	
+	[scenario addStep:[TPTestStep stepWithDescription:@"pretty-button" executionBlock:^TPTestStepResult(TPTestStep *step, NSError *__autoreleasing *error) {
+		return [self.application.mainWindow childWithIdentifier:@"pretty-button"] != nil ? TPTestStepResultSuccess : TPTestStepResultFailure;
+	}]];
+	
+	[scenario addStep:[TPTestStep stepToClickOnViewWithAccessibilityIdentifier:@"my-button"]];
 	
 	[self addScenario:scenario];
 }

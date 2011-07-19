@@ -47,6 +47,8 @@
 
 - (void)startTesting {
 	for(TPTestScenario *scenario in self.scenarios) {
+		scenario.rootElement = self.application;
+		
 		NSError *error = nil;
 		TPTestStepResult result = [scenario executeAndReturnError:&error];
 		if(result == TPTestStepResultFailure) {

@@ -8,6 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class TPElement;
+
+#define TPTestCondition(condition, error, ...) ({ \
+if (!(condition)) { \
+if (error) { \
+*error = [[NSError alloc] initWithDomain:@"TPTest" code:TPTestStepResultFailure userInfo:[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:__VA_ARGS__], NSLocalizedDescriptionKey, nil]]; \
+} \
+return TPTestStepResultFailure; \
+} \
+})
+
 typedef enum {
 	TPTestStepResultSuccess = 0,
 	TPTestStepResultFailure,
@@ -20,9 +31,14 @@ typedef TPTestStepResult (^TPTestStepExecutionBlock)(TPTestStep *step, NSError *
 @interface TPTestStep : NSObject
 
 + (TPTestStep *)stepWithDescription:(NSString *)description executionBlock:(TPTestStepExecutionBlock)block;
++ (TPTestStep *)stepThatFails;
++ (TPTestStep *)stepThatSucceeds;
++ (TPTestStep *)stepToWaitForViewWithAccessibilityIdentifier:(NSString *)identifier;
++ (TPTestStep *)stepToClickOnViewWithAccessibilityIdentifier:(NSString *)identifier;
 
 - (TPTestStepResult)executeAndReturnError:(NSError **)error;
 
 @property (nonatomic, readonly, copy) NSString *description;
+@property (nonatomic, strong) TPElement *rootElement;
 
 @end
