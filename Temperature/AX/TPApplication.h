@@ -17,6 +17,6 @@
 
 @property (nonatomic, readonly) TPElement *mainWindow;
 @property (nonatomic, readonly) TPElement *focusedWindow;
-@property (nonatomic, readonly) TPElement *windows;
+@property (nonatomic, readonly) NSArray *windows;
 
 @end
